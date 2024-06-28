@@ -23,7 +23,8 @@ const CourseSchema = new mongoose.Schema({
   ],
   resources: [
     {
-      type: String,
+      type: mongoose.Schema.Types.ObjectId,
+      ref: 'Resource',
     },
   ],
   date: {

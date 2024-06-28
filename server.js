@@ -14,6 +14,7 @@ app.use(bodyParser.json());
 // Define Routes
 app.use('/api/auth', require('./routes/auth'));
 app.use('/api/admin', require('./routes/admin'));
+app.use('/api/lecturer', require('./routes/lecturer'));
 
 const PORT = process.env.PORT || 5000;
 
