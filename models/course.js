@@ -10,23 +10,15 @@ const CourseSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
+  resources: [{
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'Resource',
+  }],
   lecturer: {
     type: mongoose.Schema.Types.ObjectId,
     ref: 'User',
     required: true,
   },
-  students: [
-    {
-      type: mongoose.Schema.Types.ObjectId,
-      ref: 'User',
-    },
-  ],
-  resources: [
-    {
-      type: mongoose.Schema.Types.ObjectId,
-      ref: 'Resource',
-    },
-  ],
   date: {
     type: Date,
     default: Date.now,

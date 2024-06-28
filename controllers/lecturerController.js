@@ -45,7 +45,7 @@ exports.answerQuery = async (req, res) => {
   try {
     let query = await Query.findById(req.params.id);
     if (!query) {
-      return res.status(404).json({ msg: 'Query not found' });
+      return res.status(404).json({ message: 'Query not found' });
     }
 
     query.answer = answer;

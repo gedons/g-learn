@@ -10,8 +10,13 @@ const ResourceSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
-  fileUrl: {
+  url: {
     type: String,
+    required: true,
+  },
+  lecturer: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'User',
     required: true,
   },
   date: {

@@ -15,6 +15,8 @@ app.use(bodyParser.json());
 app.use('/api/auth', require('./routes/auth'));
 app.use('/api/admin', require('./routes/admin'));
 app.use('/api/lecturer', require('./routes/lecturer'));
+app.use('/api/resource', require('./routes/resource'));
+app.use('/api/course', require('./routes/course'));
 
 const PORT = process.env.PORT || 5000;
 
