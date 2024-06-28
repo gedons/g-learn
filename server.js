@@ -13,7 +13,7 @@ app.use(bodyParser.json());
 
 // Define Routes
 app.use('/api/auth', require('./routes/auth'));
-// Add other routes here for admin, lecturer, student
+app.use('/api/admin', require('./routes/admin'));
 
 const PORT = process.env.PORT || 5000;
 
