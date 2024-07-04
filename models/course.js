@@ -19,6 +19,10 @@ const CourseSchema = new mongoose.Schema({
     ref: 'User',
     required: true,
   },
+  studentsCompleted: [{
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'User',
+  }],
   date: {
     type: Date,
     default: Date.now,
